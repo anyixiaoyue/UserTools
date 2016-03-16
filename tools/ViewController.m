@@ -8,15 +8,29 @@
 
 #import "ViewController.h"
 
+#import "LLMapView.h"
+
 @interface ViewController ()
+{
+//    MAMapView *_mapView;
+    
+}
+
+@property (strong, nonatomic) NSMutableArray *rememberAry;
+
+@property (strong, nonatomic) LLMapView *mapView;
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _mapView = [[LLMapView alloc]initWithFrame:self.view.frame];
+    
+    [self.view addSubview:_mapView];
 }
 
 - (void)didReceiveMemoryWarning {
